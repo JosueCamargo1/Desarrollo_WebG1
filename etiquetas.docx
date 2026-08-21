@@ -23,3 +23,31 @@
 <input> 	Crea campos para introducir diferentes tipos de datos.
 <button>	Crea un botón interactivo.
 <label>	  Define una etiqueta o descripción para un campo de formulario.
+
+Ejemplos:
+"H1"- Titulo
+<h1>Bienvenido a mi página</h1>
+"P"- Parrafo
+<p>Este es un párrafo de ejemplo.</p>
+"A"- Enlace
+<a href="https://www.google.com">Ir a Google</a>
+"Img"- Imagen
+<img src="imagen.jpg" alt="Descripción de la imagen">
+"Br" - Salto de linea
+Hola<br>Mundo
+"Strong" - Texto importante
+<strong>Este texto es importante</strong>
+"Ul" - Lista sin orden
+<ul>
+    <li>Manzana</li>
+    <li>Pera</li>
+</ul>
+"Ol" - Lista en orden
+<ol>
+    <li>Primero</li>
+    <li>Segundo</li>
+</ol>
+"Button" - Boton
+<button>Haz clic aquí</button>
+"Input"- Campo para escribir
+<input type="text" placeholder="Escribe tu nombre">
