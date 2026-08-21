@@ -1,25 +1,25 @@
-<html>	Define el inicio y fin del documento HTML.
-<head>	Contiene información del documento que no se muestra directamente.
-<title>	Define el título que aparece en la pestaña del navegador.
-<body>	Contiene todo el contenido visible de la página.
-<h1>	Define el encabezado o título principal.
-<h2>	Define un subtítulo de segundo nivel.
-<p>	Define un párrafo de texto.
-<a>	Crea enlaces hacia otras páginas o recursos.
-<img>	Inserta una imagen en la página.
-<div>	Agrupa elementos para organizar la estructura de la página.
-<span>	Agrupa una pequeña parte del texto u otros elementos en línea.
-<br>	Inserta un salto de línea.
-<hr>	Inserta una línea o separación temática.
+<html>	  Define el inicio y fin del documento HTML.
+<head>	  Contiene información del documento que no se muestra directamente.
+<title>	  Define el título que aparece en la pestaña del navegador.
+<body>	  Contiene todo el contenido visible de la página.
+<h1>	    Define el encabezado o título principal.
+<h2>	    Define un subtítulo de segundo nivel.
+<p>	      Define un párrafo de texto.
+<a>	      Crea enlaces hacia otras páginas o recursos.
+<img>	    Inserta una imagen en la página.
+<div>	    Agrupa elementos para organizar la estructura de la página.
+<span>	  Agrupa una pequeña parte del texto u otros elementos en línea.
+<br>	    Inserta un salto de línea.
+<hr>	    Inserta una línea o separación temática.
 <strong>	Indica que un texto tiene gran importancia; normalmente aparece en negrita.
-<em>	Da énfasis a un texto; normalmente aparece en cursiva.
-<ul>	Crea una lista sin orden numérico.
-<ol>	Crea una lista ordenada numéricamente.
-<li>	Define un elemento dentro de una lista.
-<table>	Crea una tabla.
-<tr>	Define una fila de una tabla.
-<td>	Define una celda normal de una tabla.
-<form>	Crea un formulario para introducir y enviar datos.
-<input>	Crea campos para introducir diferentes tipos de datos.
+<em>	    Da énfasis a un texto; normalmente aparece en cursiva.
+<ul>	    Crea una lista sin orden numérico.
+<ol>	    Crea una lista ordenada numéricamente.
+<li>	    Define un elemento dentro de una lista.
+<table>	  Crea una tabla.
+<tr>	    Define una fila de una tabla.
+<td>	    Define una celda normal de una tabla.
+<form>	  Crea un formulario para introducir y enviar datos.
+<input> 	Crea campos para introducir diferentes tipos de datos.
 <button>	Crea un botón interactivo.
-<label>	Define una etiqueta o descripción para un campo de formulario.
+<label>	  Define una etiqueta o descripción para un campo de formulario.
