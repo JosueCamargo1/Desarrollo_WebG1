@@ -1,0 +1,37 @@
+form-group {
+    margin-bottom: 1.2rem;
+}
+
+label{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #334155;
+}
+input{
+    width: 100%;  
+    padding: 0.6rem;
+    border: 1.5px solid #cdb5e1;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+input.error{
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+.error-message{
+    color: #dc2626;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    display: block;
+}
+.btn-primary{
+    background-color: #2563eb;
+    color: #ffff;
+    border: none;
+    padding: 07.rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+
+}

@@ -1,136 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Mi Portafolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidad II · Formularios avanzados</title>
+    <!-- Font Awesome 6 (gratuito) para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Estilos CSS personalizados -->
+    <link rel="stylesheet" href="login.css" />
 </head>
+  <body>
+    <form id="loginForm" novalidate>
+        <h1>Iniciar Sesion</h1>
 
-<body>
+        <div class="form-group">
+             <label for="LoginEmail">Correo Electronico</label>
+             <input
+             type="email" 
+             id="loginEmail"
+             name="email"
+             required
+             placeholder="correo@unicaribe.edu.co"/> 
+            <span class="error-message" id="emailError"></span>
+        </div>           
 
-    <!-- ENCABEZADO -->
-    <header>
-        <h1>Mi Portafolio</h1>
-        <p>Estudiante universitario.</p>
-    </header>
+        <div class="form-group">
+            <label for="loginPass"></label>
+            <input
+            type="password" 
+            id="loginPass"
+            name="password"
+            required
+            minlength="6"
+            placeholder="**********"/>
+            <span class="error-massage" id="passError"></span>
+        </div>
 
-    <hr>
+        <button type="submit" class="btn-primary">Iniciar Sesion</button>
 
-    <!-- MENÚ -->
-    <nav>
-        <a href="#inicio">Inicio</a> |
-        <a href="#sobre-mi">Sobre mí</a> |
-        <a href="#habilidades">Habilidades</a> |
-        <a href="#proyecto">Proyecto</a> |
-        <a href="#contacto">Contacto</a>
-    </nav>
+    </form>
 
-    <hr>
+        <div id="loginWelcome" class="welcome-card" style="display: none;">
+            <h2>Bienvenido</h2>
+            <p>Has iniciado correctamente</p>
+            <p>Correo: <span id="userEmailDisplaty"></span></p>
+        </div>
 
-    <!-- INICIO -->
-    <section id="inicio">
-        <h2>Hola, soy Josue</h2>
-        <p>
-            Me interesa la programación, el desarrollo de
-            aplicaciones y aprender nuevas tecnologías.
-        </p>
-    </section>
-    <hr>
+   </body>
 
-    <!-- SOBRE MÍ -->
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-
-        <p>
-            Soy una persona interesada en el mundo de la programación.
-            Actualmente me desempeño en Python y continúo desarrollando
-            mis conocimientos en programación y desarrollo de software.
-        </p>
-
-        <p>
-            Me gusta crear proyectos, resolver problemas mediante código
-            y aprender nuevas herramientas.
-        </p>
-    </section>
-  <hr>
-    <!-- HABILIDADES -->
-    <section id="habilidades">
-        <h2>Mis habilidades</h2>
-
-        <ul>
-            <li>Programación</li>
-            <li>Resolución de problemas</li>
-            <li>HTML</li>
-            <li>Git y GitHub</li>
-        </ul>
-    </section>
-  <hr>
-    <!-- CONOCIMIENTOS -->
-    <section id="conocimientos">
-        <h2>Conocimientos</h2>
-
-        <h3>Python</h3>
-        <p>
-            Tengo un nivel intermedio en programacion en lenguaje de pytoon, al haber desarrollado 
-            algunos juego con la libreria de "Pygame".
-        </p>
-
-        <h3>Bases de datos</h3>
-        <p>
-            E desarrollado algunas bases de datos de nivel basico para planteamiento de ideas.
-        </p>
-    </section>
-  <hr>
-    <!-- PROYECTOS -->
-    <section id="proyectos">
-        <h2>Mi proyecto</h2>
-        <article>
-            <h3>Juego en Python</h3>
-            <p>
-                Realize juegos basicos como "La serpierte""Busca Minas", etc con la libreria pygame.
-            </p>
-        </article>
-
-    </section>
-  <hr>
-    <!-- EXPERIENCIA -->
-    <section id="experiencia">
-        <h2>Experiencia</h2>
-
-        <p>
-            Trabajo en una compañia de internet privado desarrollando mis habilidades de hardware
-            y un mejor manejo tambien en la atencion al cliente.
-        </p>
-    </section>
-  <hr>
-    <!-- EDUCACIÓN -->
-    <section id="educacion">
-        <h2>Educación</h2>
-
-        <p>
-            Consegui el nivel de tecnico en la univerdad unicaribe.
-        </p>
-    </section>
-  <hr>
-    <!-- CONTACTO -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-
-        <p><strong>Nombre:</strong> Josue Camargo</p>
-        <p><strong>Correo:</strong> josue.camargo@gmail.com</p>
-        <p><strong>Teléfono:</strong> 300 000 0000</p>
-        <p><strong>Ciudad:</strong> Colombia</p>
-        <p><strong>GitHub:</strong> github.com/JosueCamargo1</p>
-    </section>
-
-    <hr>
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        <p>© 2026 Josue Camargo - Mi Portafolio</p>
-    </footer>
-
-</body>
+  <script src="login.js"></script>
 
 </html>
-
