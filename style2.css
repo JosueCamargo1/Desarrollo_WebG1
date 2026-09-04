@@ -1,0 +1,172 @@
+/* --- RESET Y VARIABLES GLOBALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Oculta las líneas <hr> tradicionales para un diseño más limpio */
+hr {
+    border: none;
+    height: 1px;
+    background-color: transparent;
+    margin: 10px 0;
+}
+
+/* --- ENCABEZADO --- */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* --- NAVEGACIÓN --- */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    font-size: 0; /* Oculta los separadores "|" textuales del HTML */
+}
+
+nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* --- SECCIONES GENERALES --- */
+section {
+    background-color: var(--card-bg);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+section p {
+    margin-bottom: 12px;
+    color: #334155;
+}
+
+/* --- HABILIDADES (Grid de Tarjetas) --- */
+#habilidades ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+#habilidades li {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* --- PROYECTOS Y TARJETAS --- */
+article {
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-top: 15px;
+}
+
+/* --- CONTACTO --- */
+#contacto p {
+    margin-bottom: 8px;
+}
+
+#contacto strong {
+    color: var(--primary-color);
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
