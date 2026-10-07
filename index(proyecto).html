@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<script src="script.js"></script>
+<body>
+
+    
+    <header>
+      <div class="profile-container">
+            <!-- Reemplaza "foto-perfil.jpg" por la ruta de tu imagen real -->
+            <img src="https://i.pinimg.com/736x/e5/85/98/e585989fcea6bc484d0e465734f25b85.jpg" alt="Foto de perfil de Josue Camargo" class="profile-img">
+            <div class="profile-info">
+                <h1>Mi Portafolio</h1>
+                <p class="subtitle">Josue Camargo</p>
+                <p>Estudiante universitario & Desarrollador en formación</p>
+            </div>
+        </div>
+
+    </header>
+
+    <hr>
+
+    
+    <nav>
+        <a href="#inicio">Inicio</a> |
+        <a href="#sobre-mi">Sobre mí</a> |
+        <a href="#habilidades">Habilidades</a> |
+        <a href="#proyecto">Proyecto</a> |
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <hr>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <h2>Hola, soy Josue</h2>
+        <p>
+            Me interesa la programación, el desarrollo de
+            aplicaciones y aprender nuevas tecnologías.
+        </p>
+    </section>
+    <hr>
+<!-- SOBRE MÍ INTERACTIVO -->
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+
+        <div class="about-container">
+            <!-- Menú de pestañas -->
+            <div class="about-tabs">
+                <button class="tab-btn active" data-tab="historia">Mi Historia</button>
+                <button class="tab-btn" data-tab="enfoque">Mi Enfoque</button>
+                <button class="tab-btn" data-tab="intereses">Intereses</button>
+            </div>
+
+            <!-- Contenido de las pestañas -->
+            <div class="about-content">
+                <!-- Pestaña 1: Historia -->
+                <div class="tab-content active" id="tab-historia">
+                    <p>
+                        ¡Hola! Soy <strong>Josue Camargo</strong>, estudiante universitario de Colombia apasionado por el desarrollo de software y la ingeniería de soluciones digitales.
+                    </p>
+                    <p>
+                        Mi camino en la tecnología abarca desde el desarrollo en <strong>Python</strong> —creando juegos interactivos 2D con la librería Pygame— hasta la experiencia práctica en el sector de las telecomunicaciones, donde realizo soporte técnico y diagnóstico de hardware e infraestructura de red.
+                    </p>
+                </div>
+
+                <!-- Pestaña 2: Enfoque -->
+                <div class="tab-content" id="tab-enfoque">
+                    <p>
+                        Mi prioridad es la **resolución de problemas reales** combinando lógica de programación, arquitectura sólida y buena atención al cliente:
+                    </p>
+                    <ul class="about-list">
+                        <li>🐍 <strong>Desarrollo en Python:</strong> Creación de algoritmos, lógica de juegos 2D, manejo de eventos y programación orientada a objetos (POO).</li>
+                        <li>🗄️ <strong>Bases de Datos Relacionales:</strong> Modelado estructurado y desarrollo de bases de datos para proyectos y prototipos.</li>
+                        <li>🌐 <strong>Soporte Técnico y Redes:</strong> Diagnóstico de hardware, gestión de conectividad a internet y atención al usuario final con empatía y efectividad.</li>
+                        <li>⚙️ <strong>Control de Versiones:</strong> Gestión organizada de proyectos mediante Git y GitHub.</li>
+                    </ul>
+                </div>
+
+                <!-- Pestaña 3: Intereses -->
+                <div class="tab-content" id="tab-intereses">
+                    <p>
+                        Me impulsa el aprendizaje continuo y la curiosidad técnica. Entre mis principales intereses destacan:
+                    </p>
+                    <ul class="about-list">
+                        <li>🎮 <strong>Desarrollo de Videojuegos:</strong> Explorar la lógica detrás del renderizado, la física básica y el diseño de mecánicas interactivas.</li>
+                        <li>🚀 <strong>Evolución al Full Stack:</strong> Expandir mis habilidades en tecnologías web modernas (JavaScript, HTML5, CSS3) y frameworks backend.</li>
+                        <li>🔍 <strong>Cultura Autodidacta:</strong> Investigar nuevas tecnologías, optimizar procesos con código y mejorar mi flujo de trabajo como desarrollador.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tarjetas de estadísticas / Logros -->
+            <div class="about-stats">
+                <div class="stat-card">
+                    <span class="stat-number" data-target="2"></span><span>+</span>
+                    <p>Años de Práctica</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="5"></span><span>+</span>
+                    <p>Proyectos Desarrollados</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="100"></span><span>%</span>
+                    <p>Compromiso y Pasión</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  <hr>
+    <!-- HABILIDADES INTERACTIVAS -->
+    <section id="habilidades">
+        <h2>Mis habilidades</h2>
+
+        <ul class="skills-grid">
+            <li class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Icono de Programación" class="skill-icon">
+                <span>Programación</span>
+            </li>
+            <li class="skill-item">
+                <img src="https://i.pinimg.com/736x/36/8f/66/368f66379a860d5019985724bf419c19.jpg" alt="Icono de Resolución de problemas" class="skill-icon">
+                <span>Resolución de problemas</span>
+            </li>
+            <li class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Icono de HTML" class="skill-icon">
+                <span>HTML5</span>
+            </li>
+            <li class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Icono de Git y GitHub" class="skill-icon">
+                <span>Git & GitHub</span>
+            </li>
+        </ul>
+    </section>
+  <hr>
+<!-- CONOCIMIENTOS -->
+    <section id="conocimientos">
+        <h2>Conocimientos</h2>
+
+        <div class="skills-tech-grid">
+            <!-- Tarjeta Python -->
+            <div class="tech-card">
+                <div class="tech-header">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Logo de Python" class="tech-logo">
+                    <h3>Python</h3>
+                </div>
+                <p>
+                    Tengo un nivel intermedio en programación en lenguaje Python, al haber desarrollado 
+                    algunos juegos con la librería Pygame.
+                </p>
+            </div>
+
+            <!-- Tarjeta MySQL / Bases de Datos -->
+            <div class="tech-card">
+                <div class="tech-header">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Logo de MySQL" class="tech-logo">
+                    <h3>Bases de Datos (MySQL)</h3>
+                </div>
+                <p>
+                    He desarrollado algunas bases de datos a nivel básico para el planteamiento y estructuración de ideas.
+                </p>
+            </div>
+        </div>
+    </section>
+  <hr>
+    
+<!-- PROYECTOS -->
+    <section id="proyecto">
+        <h2>Mi Proyecto Destacado</h2>
+        
+        <div class="projects-grid">
+            <!-- Proyecto Pygame -->
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-badge">Python & Pygame</span>
+                    <h3>Desarrollo de Juegos Clásicos en 2D</h3>
+                </div>
+                
+                <p class="project-description">
+                    Desarrollo y recreación de videojuegos clásicos arcade utilizando <strong>Python</strong> y la librería <strong>Pygame</strong>, enfocándome en la lógica de programación, manejo de eventos, colisiones y renderizado de gráficos.
+                </p>
+
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Pygame</span>
+                    <span>Lógica 2D</span>
+                    <span>POO</span>
+                </div>
+
+                <!-- Botón interactivo para ver detalles -->
+                <button class="btn-toggle-details" aria-expanded="false">
+                    <span>Ver detalles del juego</span>
+                    <span class="arrow">▼</span>
+                </button>
+
+                <!-- Panel de detalles oculto/desplegable -->
+                <div class="project-details hidden">
+                    <div class="game-list">
+                        <div class="game-item">
+                            <h4>🐍 La Serpiente (Snake Game)</h4>
+                            <p>Implementación de la mecánica de crecimiento, detección de colisiones con los bordes/cuerpo y sistema de puntuación en tiempo real.</p>
+                        </div>
+                        <div class="game-item">
+                            <h4>💣 Busca Minas (Minesweeper)</h4>
+                            <p>Algoritmo de revelado de celdas adyacentes vacías (recursión), generación aleatoria de minas y banderas de marcado.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+  <hr>
+    
+    <section id="experiencia">
+        <h2>Experiencia</h2>
+
+        <p>
+            Trabajo en una compañia de internet privado desarrollando mis habilidades de hardware
+            y un mejor manejo tambien en la atencion al cliente.
+        </p>
+    </section>
+  <hr>
+    
+    <section id="educacion">
+        <h2>Educación</h2>
+
+        <p>
+            Consegui el nivel de tecnico en la univerdad unicaribe.
+        </p>
+    </section>
+  <hr>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+
+        <p><strong>Nombre:</strong> Josue Camargo</p>
+        <p><strong>Correo:</strong> josue.camargo@gmail.com</p>
+        <p><strong>Teléfono:</strong> 300 000 0000</p>
+        <p><strong>Ciudad:</strong> Colombia</p>
+        <p><strong>GitHub:</strong> github.com/JosueCamargo1</p>
+    </section>
+
+    <hr>
+
+    
+    <footer>
+        <p>© 2026 Josue Camargo - Mi Portafolio</p>
+    </footer>
+
+</body>
+
+</html>
