@@ -10,7 +10,14 @@
 
 <script src="script.js"></script>
 <body>
-
+    <!-- PANTALLA DE CARGA / ANIMACIÓN DE APERTURA -->
+    <div id="intro-loader">
+        <div class="loader-content">
+            <span class="loader-icon">🚀</span>
+            <h2>Josue Camargo</h2>
+            <p>Cargando portafolio...</p>
+        </div>
+    </div>
     
     <header>
       <div class="profile-container">
@@ -217,36 +224,127 @@
     </section>
   <hr>
     
-    <section id="experiencia">
-        <h2>Experiencia</h2>
+    <!-- EXPERIENCIA -->
+<section id="experiencia">
+    <h2>Experiencia</h2>
+    <p class="experiencia-subtitulo">Mi trayectoria práctica en el sector tecnológico y de redes.</p>
 
-        <p>
-            Trabajo en una compañia de internet privado desarrollando mis habilidades de hardware
-            y un mejor manejo tambien en la atencion al cliente.
-        </p>
-    </section>
-  <hr>
+    <div class="timeline-container">
+        <!-- Tarjeta de Experiencia -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">Experiencia Profesional</span>
+                <h3>Soporte Técnico & Redes</h3>
+                <span class="timeline-institution">Compañía de Internet Privado</span>
+                <p>
+                    Desarrollo de habilidades técnicas en gestión de hardware, infraestructura de redes y conectividad, asegurando un servicio óptimo y fortaleciendo la atención al usuario final con empatía y resolución efectiva de problemas.
+                </p>
+                <div class="project-tags" style="margin-top: 12px; margin-bottom: 0;">
+                    <span>Diagnóstico de Hardware</span>
+                    <span>Redes y Conectividad</span>
+                    <span>Atención al Cliente</span>
+                    <span>Soporte Técnico</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- EDUCACIÓN -->
+<section id="educacion">
+    <h2>Educación</h2>
+    <p class="educacion-subtitulo">Mi formación académica y evolución profesional.</p>
+
+    <div class="timeline-container">
+        <!-- Hito / Tarjeta de Educación -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">2026 - Presente</span>
+                <h3>Ingeniería de Sistemas</h3>
+                <span class="timeline-institution">IES INFOTEP</span>
+                <p>
+                    Formación profesional enfocada en el desarrollo de software, bases de datos relacionales, estructuras de datos y arquitectura de sistemas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Segundo Hito (Universidad Unicaribe) -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">Formación Académica</span>
+                <h3>Nivel Técnico</h3>
+                <span class="timeline-institution">Universidad Unicaribe</span>
+                <p>
+                    Culminación exitosa de estudios técnicos, adquiriendo bases sólidas en tecnología, lógica de programación y resolución de problemas técnicos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p class="contacto-subtitulo">¿Tienes un proyecto, propuesta o quieres conectar? Escríbeme.</p>
+
+    <div class="contact-grid">
+        <!-- Tarjeta Nombre -->
+        <div class="contact-card">
+            <div class="contact-icon">👤</div>
+            <div class="contact-info">
+                <span class="contact-label">Nombre</span>
+                <p class="contact-value">Josue Camargo</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta Correo -->
+        <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info">
+                <span class="contact-label">Correo</span>
+                <div class="contact-action">
+                    <a href="mailto:josue.camargo@gmail.com" class="contact-link">josue.camargo@gmail.com</a>
+                    <button class="btn-copy" data-copy="josue.camargo@gmail.com" title="Copiar correo">📋</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta Teléfono -->
+        <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+                <span class="contact-label">Teléfono</span>
+                <div class="contact-action">
+                    <a href="tel:+573000000000" class="contact-link">+57 300 000 0000</a>
+                    <button class="btn-copy" data-copy="+573000000000" title="Copiar teléfono">📋</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta Ciudad -->
+        <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div class="contact-info">
+                <span class="contact-label">Ciudad</span>
+                <p class="contact-value">Santa Marta, Colombia</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta GitHub -->
+        <div class="contact-card contact-card-full">
+            <div class="contact-icon">💻</div>
+            <div class="contact-info">
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/JosueCamargo1" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    github.com/JosueCamargo1 ↗
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
     
-    <section id="educacion">
-        <h2>Educación</h2>
 
-        <p>
-            Consegui el nivel de tecnico en la univerdad unicaribe.
-        </p>
-    </section>
-  <hr>
-    
-    <section id="contacto">
-        <h2>Contacto</h2>
-
-        <p><strong>Nombre:</strong> Josue Camargo</p>
-        <p><strong>Correo:</strong> josue.camargo@gmail.com</p>
-        <p><strong>Teléfono:</strong> 300 000 0000</p>
-        <p><strong>Ciudad:</strong> Colombia</p>
-        <p><strong>GitHub:</strong> github.com/JosueCamargo1</p>
-    </section>
-
-    <hr>
 
     
     <footer>
