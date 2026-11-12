@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observerOptions = {
         root: null,
-        rootMargin: "-20% 0px -60% 0px",
+        rootMargin: "-20px 0px -60px 0px",
         threshold: 0
     };
 
@@ -73,62 +73,61 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.1 });
 
     sections.forEach(section => revealObserver.observe(section));
-});
 
-const tiltImages = document.querySelectorAll('.profile-img, .tech-logo');
+    // -----------------------------------------------------------------
+    // 4. EFECTO TILT (3D) EN IMÁGENES DE PERFIL Y LOGOS
+    // -----------------------------------------------------------------
+    const tiltImages = document.querySelectorAll('.profile-img, .tech-logo');
 
-tiltImages.forEach(img => {
-    // Al mover el ratón sobre la imagen
-    img.addEventListener('mousemove', (e) => {
-        const rect = img.getBoundingClientRect();
-        
-        // Calcular el centro de la imagen
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        
-        // Posición relativa del cursor desde el centro (-1 a 1)
-        const percentX = (e.clientX - centerX) / (rect.width / 2);
-        const percentY = (e.clientY - centerY) / (rect.height / 2);
-        
-        // Grados de rotación maximos (ajusta a 15-20 si quieres más movimiento)
-        const maxRotation = 15; 
-        const rotateX = -percentY * maxRotation;
-        const rotateY = percentX * maxRotation;
+    tiltImages.forEach(img => {
+        img.addEventListener('mousemove', (e) => {
+            const rect = img.getBoundingClientRect();
+            
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            const percentX = (e.clientX - centerX) / (rect.width / 2);
+            const percentY = (e.clientY - centerY) / (rect.height / 2);
+            
+            const maxRotation = 15; 
+            const rotateX = -percentY * maxRotation;
+            const rotateY = percentX * maxRotation;
 
-        // Aplica el efecto de rotación y elevación
-        img.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+            img.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+        });
+
+        img.addEventListener('mouseleave', () => {
+            img.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
     });
 
-    // Al salir el cursor, restablecer la posición original
-    img.addEventListener('mouseleave', () => {
-        img.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale(1)';
+    // -----------------------------------------------------------------
+    // 5. ACORDEÓN / DESPLEGABLE DE PROYECTOS
+    // -----------------------------------------------------------------
+    const toggleDetailsBtns = document.querySelectorAll('.btn-toggle-details');
+
+    toggleDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const detailsContainer = btn.nextElementSibling;
+            const isHidden = detailsContainer.classList.contains('hidden');
+
+            if (isHidden) {
+                detailsContainer.classList.remove('hidden');
+                btn.classList.add('active');
+                btn.querySelector('span').textContent = 'Ocultar detalles';
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                detailsContainer.classList.add('hidden');
+                btn.classList.remove('active');
+                btn.querySelector('span').textContent = 'Ver detalles del juego';
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
     });
-});
 
-const toggleDetailsBtns = document.querySelectorAll('.btn-toggle-details');
-
-toggleDetailsBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const detailsContainer = btn.nextElementSibling;
-        const isHidden = detailsContainer.classList.contains('hidden');
-
-        if (isHidden) {
-            detailsContainer.classList.remove('hidden');
-            btn.classList.add('active');
-            btn.querySelector('span').textContent = 'Ocultar detalles';
-            btn.setAttribute('aria-expanded', 'true');
-        } else {
-            detailsContainer.classList.add('hidden');
-            btn.classList.remove('active');
-            btn.querySelector('span').textContent = 'Ver detalles del juego';
-            btn.setAttribute('aria-expanded', 'false');
-        }
-    });
-});
-// -----------------------------------------------------------------
-// SISTEMA DE PESTAÑAS Y CONTADORES ANIMADOS 
-// -----------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+    // -----------------------------------------------------------------
+    // 6. SISTEMA DE PESTAÑAS Y CONTADORES ANIMADOS ("SOBRE MÍ")
+    // -----------------------------------------------------------------
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -137,25 +136,19 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.addEventListener('click', () => {
                 const targetTab = btn.getAttribute('data-tab');
 
-                // 1. Quitar la clase 'active' de todos los botones y contenidos
                 tabBtns.forEach(b => b.classList.remove('active'));
                 tabContents.forEach(c => c.classList.remove('active'));
 
-                // 2. Activar el botón presionado
                 btn.classList.add('active');
 
-                // 3. Mostrar el contenido correspondiente
                 const targetElement = document.getElementById(`tab-${targetTab}`);
                 if (targetElement) {
                     targetElement.classList.add('active');
-                } else {
-                    console.error(`No se encontró el elemento con id: tab-${targetTab}`);
                 }
             });
         });
     }
 
-    // Animación de los números de las estadísticas
     const statNumbers = document.querySelectorAll('.stat-number');
     let animatedStats = false;
 
@@ -189,39 +182,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
         statsObserver.observe(aboutSection);
     }
-});
-// -----------------------------------------------------------------
-// INTERACTIVIDAD EN HABILIDADES (EFECTO 3D & MOVIMIENTO EN HOVER)
-// -----------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+
+    // -----------------------------------------------------------------
+    // 7. INTERACTIVIDAD EN HABILIDADES (EFECTO 3D EN TARJETAS)
+    // -----------------------------------------------------------------
     const skillCards = document.querySelectorAll('.skill-item');
 
     skillCards.forEach(card => {
         const icon = card.querySelector('.skill-icon');
 
-        // Movimiento 3D al desplazar el cursor sobre la tarjeta
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left; // Posición X dentro de la tarjeta
-            const y = e.clientY - rect.top;  // Posición Y dentro de la tarjeta
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            // Grados de inclinación
             const rotateX = ((y - centerY) / centerY) * -12;
             const rotateY = ((x - centerX) / centerX) * 12;
 
             card.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
 
-            // Animación y ligera rotación del icono
             if (icon) {
                 icon.style.transform = `scale(1.15) rotate(5deg)`;
                 icon.style.transition = `transform 0.1s ease-out`;
             }
         });
 
-        // Restablecer posición original cuando el ratón sale
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) translateY(0px)';
             card.style.transition = 'transform 0.3s ease';
@@ -232,4 +220,51 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+	
+	// -----------------------------------------------------------------
+    // 8. FUNCIONALIDAD DE COPIAR AL PORTAPAPELES (CONTACTO)
+    // -----------------------------------------------------------------
+    const copyButtons = document.querySelectorAll('.btn-copy');
+    
+    // Crear elemento Toast de notificación si no existe
+    let toast = document.querySelector('.toast-notification');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.textContent = '¡Copiado al portapapeles!';
+        document.body.appendChild(toast);
+    }
+
+    let toastTimeout;
+
+    copyButtons.forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const textToCopy = btn.getAttribute('data-copy');
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                
+                toast.textContent = `¡Copiado: ${textToCopy}!`;
+                toast.classList.add('show');
+
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
+            } catch (err) {
+                console.error('Error al copiar:', err);
+            }
+        });
+    });
+	 // -----------------------------------------------------------------
+// ANIMACIÓN DE APERTURA (INTRO LOADER)
+// -----------------------------------------------------------------
+window.addEventListener("load", () => {
+    const loader = document.getElementById("intro-loader");
+    if (loader) {
+        // Pequeño retardo opcional (en milisegundos) para que se luzca la animación
+        setTimeout(() => {
+            loader.classList.add("fade-out");
+        }, 600); // 600 milisegundos = 0.6 segundos
+    }
+});
 });
